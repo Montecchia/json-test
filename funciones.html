@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function decirHola(){
+            alert("Hola");
+        }
+
+        var puerta2 = {
+                        id: 2, // Las claves se pueden escribir asi tambien
+                        nombre: "Puerta 2",
+                        precio: 150,
+                        etiquetas: ["etiqueta 1", "etiqueta 2"],
+                        funcionHola: decirHola, //Puedo poner una funcion como atributo
+                        funcionAdios: function(){ //O puedo definir una nueva funcion dentro del objeto
+                            alert("Adios");
+                        },
+                        getDatos: function(){
+                            alert("ID: " + this.id); //this referencia a la clase sin referenciar el objeto por su nombre
+                            alert("Nombre: " + this.nombre);
+                            alert("Precio: " + this.precio);
+                            alert("Etiquetas: " + this.etiquetas);
+                        }
+                      }
+        puerta2.funcionHola();
+        puerta2.funcionAdios();
+        puerta2.getDatos();
+
+        var objeto = {
+                        id: 3,
+                        funcionConAtributos: function(entero){ //Pueden tener parametros
+                            alert(entero);
+                        }
+                     }
+
+        objeto.funcionConAtributos(10); //Se llaman en la invocacion
+    </script>
+</body>
+</html>
