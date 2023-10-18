@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clases JSON</title>
+</head>
+<body>
+    <script>
+        function Casa(valor, terreno, color){ //Al usar mayuscula es una clase
+            //Atributos inicializados con los parametros
+            this.valor = valor;
+            this.terreno = terreno;
+            this.color = color;
+
+            //Metodos
+            this.darTecho = function(){
+                alert("Habitantes techados");
+            }
+            this.darProtecchon = function(){
+                alert("Habitantes protegidos")
+            }
+        }
+
+        var unaCasa = new Casa(100, 50, "azul"); //Crear un objeto a partir de la clase Casa
+        unaCasa.darTecho(); //Pruebo el objeto
+    </script>
+</body>
+</html>

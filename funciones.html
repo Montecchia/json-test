@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Funciones</title>
 </head>
 <body>
     <script>
@@ -30,14 +30,20 @@
         puerta2.funcionAdios();
         puerta2.getDatos();
 
+        function suma2(numero){
+            return 2 + numero; //Retorno con return (quien diría)
+        }
+
         var objeto = {
                         id: 3,
                         funcionConAtributos: function(entero){ //Pueden tener parametros
                             alert(entero);
-                        }
+                        },
+                        cuatro: suma2(2) // Puede indicar parametros en el objeto
                      }
 
         objeto.funcionConAtributos(10); //Se llaman en la invocacion
+        alert(objeto.cuatro); //Cuando la llamo, como cuatro ya tiene el parametro en el objeto va sin parentesis
     </script>
 </body>
 </html>
