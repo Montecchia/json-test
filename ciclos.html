@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+    <script>
+        var objeto = {
+            id: 1,
+            nombre: "Objeto",
+            arreglo: [1,2,3],
+            objetos: [
+                {nombre: "Objetito 1", numero: 1},
+                {nombre: "Objetito 2", numero: 2}
+            ]
+        }
+
+        //Ciclo for
+
+        //Recorrer objeto
+        var datos = "";
+        for(i in objeto){ //Cicla una vez por elemento en el objeto
+            datos += (i + ": " + objeto[i] + "\n") //i nos da la clave y objeto[i] el valor
+        }
+        alert(datos);
+
+        //Recorrer arreglo
+
+        for(i in objeto.arreglo){
+            alert(objeto.arreglo[i]);
+        }
+
+        //for anidado
+        for(i in objeto.objetos){
+            var objetito = "";
+            for(j in objeto.objetos[i]){
+                objetito += (j + ": " + objeto.objetos[i][j] + "\n");
+            }
+            alert(objetito);
+        }
+        
+
+    </script>
+</body>
+</html>

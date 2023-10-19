@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos en Objetos</title>
+</head>
+<body>
+    <script>
+
+        var autoAzul = {
+            marca: "Toyota",
+            modelo: 1997
+        }
+
+        var autoRojo = {
+            marca: "Fiat",
+            modelo: 2010
+        }
+
+        var eduardo = {
+            nombre: "Eduardo",
+            edad: 28,
+            autos: [autoAzul, autoRojo], //Objetos existentes en un array
+            juegos: { //Objetos definidos directamente en el objeto
+                juego1: "Need for Speed",
+                juego2: "Call of Duty"
+            }
+        }
+
+        alert(eduardo.juegos.juego1);
+        alert(eduardo.autos[0].marca);
+
+        var cajaHerramientas = {
+            herramientas: { //Objetos dentro de la caja de herramientas
+                martillo: "Martillo",
+                //Array en objeto
+                destornilladores: ["phillips", "allen"],
+                //Objetos en array
+                llaves: [{tipo: "inglesa", numero: 3}, {tipo: "inglesa", numero: 5}]
+            }
+        }
+
+        alert(cajaHerramientas.herramientas.destornilladores[1]);
+        alert(cajaHerramientas.herramientas.llaves[0].numero);
+
+    </script>
+</body>
+</html>

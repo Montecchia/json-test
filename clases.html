@@ -23,6 +23,30 @@
 
         var unaCasa = new Casa(100, 50, "azul"); //Crear un objeto a partir de la clase Casa
         unaCasa.darTecho(); //Pruebo el objeto
+
+        alert(unaCasa.__proto__); //Podemos ver el prototipo
+        console.log(unaCasa.__proto__); //En el log de la consola podemos ver todos los datos
+
+        var objeto = {
+            id: 1,
+            precio: 50
+        }
+
+        console.log(objeto.__proto__); //Con esto podemos ver el prototipo de un objeto JSON
+
+        var nombre = "Juan";
+        console.log(nombre.__proto__); //Prototipo de un string
+
+        //Se pueden agregar nuevos atributos fuera de la definicion de clase
+        unaCasa.numeroDePuertas = 8; 
+        alert("Numero de puertas en una casa: "+ unaCasa.numeroDePuertas);
+
+        //Defino una funcion fuera de la definicion de clase
+        unaCasa.abrirPuerta = function(){ 
+            alert("Una casa abrio la puerta");
+        }
+        unaCasa.abrirPuerta();
+
     </script>
 </body>
 </html>
