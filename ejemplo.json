@@ -1,0 +1,17 @@
+{
+    "//Comentario1": "JSON no admite comentarios (????)",
+    "//Comentario2": "Se puede hacer algo asi pero es un asco",
+    "//Comentario3": "Las claves entre comillas"
+}
+
+{
+    "nombre": "Eduardo",
+    "edad": 28,
+    "direccion": "calle falsa 123",
+    "getNombre": function(){
+        return this.nombre;
+    },
+    "setNombre": function(nuevoNombre){
+        this.nombre = nuevoNombre;
+    }
+}
