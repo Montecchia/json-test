@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringify</title>
+</head>
+<body>
+    <script>
+
+        // Queremos imprimir el objeto eduardo
+        var eduardo = {
+            nombre: "Eduardo",
+            edad: 28,
+            direccion: "calle falsa 123"
+        }
+
+        alert(eduardo); //Esto estaría imprimiento [object Object]
+
+        var eduardoString = JSON.stringify(eduardo); //Genera una cadena con la informacion
+        
+        //{"nombre":"Eduardo","edad":28,"direccion":"calle falsa 123"}
+        alert(eduardoString);
+
+    </script>
+</body>
+</html>

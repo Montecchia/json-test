@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse</title>
+</head>
+<body>
+    <script>
+        var eduardo = {
+            nombre: "Eduardo",
+            edad: 28,
+            direccion: "calle falsa 123"
+        }
+
+        var eduardoString = JSON.stringify(eduardo); 
+
+        // Queremos almacenar el objeto (con stringify) en el navegador
+
+        // Usamos la siguiente funcion para almacenar un item en la memoria local
+        // localStorage.setItem("Clave", Objeto);
+        localStorage.setItem("ObjetoEduardo", eduardoString);
+
+        // Recuperamos el objeto del localStorage
+        var datosStorage = localStorage.getItem("ObjetoEduardo");
+        alert(datosStorage);
+        
+        // datosStorage sería la version en string
+
+        // Ahora volvemos a parsear el objeto
+        var eduardoParse = JSON.parse(datosStorage);
+
+        alert(eduardoParse.nombre);
+    </script>
+</body>
+</html>

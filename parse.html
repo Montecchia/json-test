@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse</title>
+</head>
+<body>
+    <script>
+
+        // Queremos simular que enviamos el objeto eduardo y lo recibimos en otro lado
+        var eduardo = {
+            nombre: "Eduardo",
+            edad: 28,
+            direccion: "calle falsa 123"
+        }
+
+        // Obtenemos el string del objeto eduardo
+        var eduardoString = JSON.stringify(eduardo); 
+
+        // Ese string seria lo que enviamos
+
+        // Luego al recibirlo
+
+        // Parseamos el string
+        var eduardoParse = JSON.parse(eduardoString); //Al parsea reconstruimos el objeto
+
+        //Y asi podemos mostrar la edad
+        alert(eduardoParse.edad);
+
+    </script>
+</body>
+</html>
